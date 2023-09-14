@@ -7,5 +7,5 @@
             display: none;
         }
     </style>
-    <img src="{{ asset('/admin/images/charity-10.jpg') }}" class="w-100" alt="">
+    <img src="{{ asset('/admin/images/charity-10.jpg') }}" class="w-100 vh-100" alt="">
 @endsection

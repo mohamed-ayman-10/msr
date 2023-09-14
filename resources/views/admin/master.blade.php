@@ -37,6 +37,8 @@
     <link rel="stylesheet" href="/admin/assets/vendor/libs/perfect-scrollbar/perfect-scrollbar.css" />
     <link rel="stylesheet" href="/admin/assets/vendor/libs/node-waves/node-waves.css" />
 
+    <link rel="stylesheet" href="/admin/assets/css/custom.css" />
+
     <!-- Page CSS -->
 
     <!-- Helpers -->

@@ -98,5 +98,11 @@
                 </li>
             </ul>
         </li>
+        <li class="menu-item @yield('blog')">
+            <a href="{{ route('blog.index') }}" class="menu-link">
+                <i class="menu-icon tf-icons ti ti-news"></i>
+                <div data-i18n="Page 1">الاخبار</div>
+            </a>
+        </li>
     </ul>
 </aside>

@@ -82,4 +82,7 @@ Route::middleware('auth')->group(function () {
         Route::post('boss/postAssociation', [BossController::class, 'postAssociation'])->name('boss.postAssociation');
         Route::get('boss', [BossController::class, 'index'])->name('boss.index');
     });
+
+    // Blog
+    Route::resource('blog', \App\Http\Controllers\BlogController::class);
 });

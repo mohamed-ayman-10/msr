@@ -13,7 +13,14 @@ use Illuminate\Support\Facades\Route;
 | be assigned to the "api" middleware group. Make something great!
 |
 */
+// Home
+Route::get('home', [\App\Http\Controllers\Api\HomeController::class, 'index']);
 
-Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
-    return $request->user();
-});
+// Menu
+Route::get('menu', [\App\Http\Controllers\Api\MenuController::class, 'index']);
+Route::get('menu/{id}', [\App\Http\Controllers\Api\MenuController::class, 'getMenuById']);
+
+// Blog
+Route::get('blog', [\App\Http\Controllers\Api\BlogController::class, 'index']);
+Route::get('blog/{id}', [\App\Http\Controllers\Api\BlogController::class, 'getBlogById']);
+

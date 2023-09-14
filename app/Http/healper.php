@@ -13,3 +13,21 @@ function fileDelete($file)
         unlink($file);
     }
 }
+
+function returnData(int $status, string $msg, $data)
+{
+    return response()->json([
+        'status' => $status,
+        'msg' => $msg,
+        'data' => $data
+    ]);
+}
+
+function returnNoData()
+{
+    return response()->json([
+        'status' => 204,
+        'msg' => '',
+        'data' => []
+    ]);
+}

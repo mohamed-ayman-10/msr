@@ -12,6 +12,6 @@ class Home extends Model
     protected $guarded = [];
 
     public function images() {
-        return $this->hasMany(Image::class);
+        return $this->hasMany(Image::class, 'home_id', 'id');
     }
 }
