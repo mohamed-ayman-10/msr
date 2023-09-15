@@ -22,10 +22,6 @@ class CommitteeController extends Controller
         }
     }
 
-    public function create()
-    {
-        //
-    }
 
     public function store(Request $request)
     {
@@ -62,16 +58,6 @@ class CommitteeController extends Controller
         } catch (\Exception $exception) {
             return back()->withErrors(['error' => $exception->getMessage()]);
         }
-    }
-
-    public function show(string $id)
-    {
-        //
-    }
-
-    public function edit(string $id)
-    {
-        //
     }
 
     public function update(Request $request, string $id)

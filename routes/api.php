@@ -24,3 +24,13 @@ Route::get('menu/{id}', [\App\Http\Controllers\Api\MenuController::class, 'getMe
 Route::get('blog', [\App\Http\Controllers\Api\BlogController::class, 'index']);
 Route::get('blog/{id}', [\App\Http\Controllers\Api\BlogController::class, 'getBlogById']);
 
+// association
+Route::controller(\App\Http\Controllers\Api\AssociationController::class)->prefix('association')->group(function () {
+    Route::get('objective', 'objective');
+    Route::get('vision', 'vision');
+    Route::get('plan', 'plan');
+    Route::get('chart', 'chart');
+    Route::get('committee', 'committee');
+    Route::get('boss', 'boss');
+});
+

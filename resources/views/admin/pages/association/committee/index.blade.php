@@ -61,27 +61,10 @@
                                     <button type="button" class="btn-close" data-bs-dismiss="modal"
                                             aria-label="Close"></button>
                                 </div>
-                                <form action="{{ route('association.plan.update', $item->id) }}" method="post">
+                                <form action="{{ route('association.committee.update', $item->id) }}" method="post" enctype="multipart/form-data">
                                     @csrf
                                     @method('put')
                                     <div class="modal-body">
-                                        <div class="form-group mb-3">
-                                            <label class="form-label w-100">
-                                                اختر الخطة
-                                                <span class="text-danger">*</span>
-                                                <select name="title" class="form-select">
-                                                    <option {{$item->title == 'الخطة التشغيلية' ? 'selected' : ''}} value="الخطة التشغيلية">الخطة التشغيلية</option>
-                                                    <option {{$item->title == 'الخطة الإستراتيجية' ? 'selected' : ''}} value="الخطة الإستراتيجية">الخطة الإستراتيجية</option>
-                                                </select>
-                                            </label>
-                                        </div>
-                                        <div class="form-group mb-3">
-                                            <label class="form-label w-100">
-                                                العنوان
-                                                <span class="text-danger">*</span>
-                                                <input type="text" name="name" value="{{$item->name}}" class="form-control" placeholder="العنوان">
-                                            </label>
-                                        </div>
                                         <div class="form-group mb-3">
                                             <label class="form-label w-100">
                                                 PDF
@@ -109,7 +92,7 @@
                                     <button type="button" class="btn-close" data-bs-dismiss="modal"
                                             aria-label="Close"></button>
                                 </div>
-                                <form action="{{ route('association.plan.destroy', $item->id) }}" method="post">
+                                <form action="{{ route('association.committee.destroy', $item->id) }}" method="post">
                                     @csrf
                                     @method('delete')
                                     <div class="modal-body">
